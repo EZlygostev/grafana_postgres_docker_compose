@@ -1,5 +1,10 @@
 version: '3.9'
 services:
+  adminer:
+    image: dockette/adminer:full-php5
+    restart: always
+    ports:
+    - 1010:1010
 
   web-server:
     image: nginx:1.21.3-alpine
@@ -25,6 +30,12 @@ services:
     - innet
     depends_on:
     - web-server
+    volumes:
+    - ./provisioning/:/etc/grafana/provisioning/datasources/
+    - ./dashboards/:/etc/grafana/provisioning/dashboards/
+    - ./dashboards/prom_node.json:/var/lib/grafana/dashboards/prom_node.json
+    - grafana-storage:/var/lib/grafana
+
 
   db:
     image: postgres:latest
@@ -116,3 +127,4 @@ volumes:
   db_postgre:
   jmbp_volume:
   prometheus_data:
+  grafana-storage:
