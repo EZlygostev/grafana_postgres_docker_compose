@@ -1,11 +1,5 @@
 version: '3.9'
 services:
-  adminer:
-    image: dockette/adminer:full-php5
-    restart: always
-    ports:
-    - 1010:1010
-
   web-server:
     image: nginx:1.21.3-alpine
     container_name: nginx_web
@@ -33,7 +27,7 @@ services:
     volumes:
     - ./provisioning/:/etc/grafana/provisioning/datasources/
     - ./dashboards/:/etc/grafana/provisioning/dashboards/
-    - ./dashboards/prom_node.json:/var/lib/grafana/dashboards/prom_node.json
+    - ./dashboards/1 Node Exporter 0.16 + for Prometheus Monitoring display board-1683536451651.json:/var/lib/grafana/dashboards/1 Node Exporter 0.16 + for Prometheus Monitoring display board-1683536451651.json
     - grafana-storage:/var/lib/grafana
 
 

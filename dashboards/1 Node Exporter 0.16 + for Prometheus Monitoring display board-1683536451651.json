@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 10795,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 2,
   "links": [
     {
       "icon": "external link",
@@ -52,7 +52,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "editable": true,
       "error": false,
@@ -82,7 +82,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "refId": "A"
         }
@@ -93,7 +93,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -163,7 +163,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "time() - node_boot_time_seconds{instance=~\"$node\"}",
           "format": "time_series",
@@ -180,7 +180,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -248,7 +248,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "count(count(node_cpu_seconds_total{instance=~\"$node\", mode='system'}) by (cpu))",
           "format": "time_series",
@@ -265,7 +265,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -334,7 +334,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "100 - (avg(irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"idle\"}[5m])) * 100)",
           "format": "time_series",
@@ -352,7 +352,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -421,7 +421,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "avg(irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"iowait\"}[5m])) * 100",
           "format": "time_series",
@@ -439,7 +439,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -499,7 +499,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "(1 - (node_memory_MemAvailable_bytes{instance=~\"$node\"} / (node_memory_MemTotal_bytes{instance=~\"$node\"})))* 100",
           "format": "time_series",
@@ -516,7 +516,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -575,7 +575,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_filefd_allocated{instance=~\"$node\"}",
           "format": "time_series",
@@ -591,7 +591,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -660,7 +660,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "100 - ((node_filesystem_avail_bytes{instance=~\"$node\",mountpoint=\"/\",fstype=~\"ext4|xfs\"} * 100) / node_filesystem_size_bytes {instance=~\"$node\",mountpoint=\"/\",fstype=~\"ext4|xfs\"})",
           "format": "time_series",
@@ -676,7 +676,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "Get the largest partition by the variable maxmount.",
       "fieldConfig": {
@@ -745,7 +745,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "100 - ((node_filesystem_avail_bytes{instance=~\"$node\",mountpoint=\"$maxmount\",fstype=~\"ext4|xfs\"} * 100) / node_filesystem_size_bytes {instance=~\"$node\",mountpoint=\"$maxmount\",fstype=~\"ext4|xfs\"})",
           "format": "time_series",
@@ -761,7 +761,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "fieldConfig": {
@@ -829,7 +829,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -854,7 +854,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "",
       "editable": true,
@@ -903,7 +903,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_load1{instance=~\"$node\"}",
           "format": "time_series",
@@ -919,7 +919,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_load5{instance=~\"$node\"}",
           "format": "time_series",
@@ -933,7 +933,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_load15{instance=~\"$node\"}",
           "format": "time_series",
@@ -989,7 +989,7 @@
       },
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 1,
       "description": "",
@@ -1021,7 +1021,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_filesystem_size_bytes {instance=~\"$node\",fstype=~\"ext4|xfs\"}",
           "format": "time_series",
@@ -1040,7 +1040,7 @@
       "columns": [],
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fontSize": "120%",
       "gridPos": {
@@ -1195,7 +1195,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext4|xfs\"}",
           "format": "table",
@@ -1208,7 +1208,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_filesystem_avail_bytes {instance=~'$node',fstype=~\"ext4|xfs\"}",
           "format": "table",
@@ -1222,7 +1222,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "1-(node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext4|xfs\"} / node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext4|xfs\"})",
           "format": "table",
@@ -1235,7 +1235,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "",
           "format": "table",
@@ -1269,7 +1269,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 2,
       "description": "Node_disk_io_time_seconds_total:\nThe number of milliseconds the disk spends on input/output operations. This value is the accumulated value. (Milliseconds Spent Doing I/Os)\n\nIrate(node_disk_io_time_seconds_total[1m]):\nCalculate the rate per second: (last value - last previous value) / timestamp difference, that is: the percentage of time that the disk spends on I/O operations in 1 second.",
@@ -1318,7 +1318,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "avg(irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"system\"}[1m])) by (instance)",
           "format": "time_series",
@@ -1333,7 +1333,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "avg(irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"user\"}[1m])) by (instance)",
           "format": "time_series",
@@ -1346,7 +1346,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "avg(irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"idle\"}[1m])) by (instance)",
           "format": "time_series",
@@ -1359,7 +1359,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "avg(irate(node_cpu_seconds_total{instance=~\"$node\",mode=\"iowait\"}[1m])) by (instance)",
           "format": "time_series",
@@ -1372,7 +1372,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_io_time_seconds_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1428,7 +1428,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 2,
       "fill": 6,
@@ -1475,7 +1475,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -1489,7 +1489,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"} - node_memory_MemAvailable_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -1502,7 +1502,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_MemFree_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -1515,7 +1515,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_Buffers_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -1528,7 +1528,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_Cached_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -1541,7 +1541,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_MemAvailable_bytes{instance=~\"$node\"}",
           "format": "time_series",
@@ -1555,7 +1555,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"} - (node_memory_Cached_bytes{instance=~\"$node\"} + node_memory_Buffers_bytes{instance=~\"$node\"} + node_memory_MemFree_bytes{instance=~\"$node\"})",
           "format": "time_series",
@@ -1604,7 +1604,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "Reads completed: 每个磁盘分区每秒读完成次数\n\nWrites completed: 每个磁盘分区每秒写完成次数\n\nIO now 每Reads completed: Reads per second for each disk partition\n\nWrites completed: Write completions per second for each disk partition\n\nIO now The number of input/output requests being processed per second per disk partition个磁盘分区每秒正在处理的输入/输出请求数",
       "fill": 2,
@@ -1657,7 +1657,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_reads_completed_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1671,7 +1671,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_writes_completed_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1684,7 +1684,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_disk_io_now{instance=~\"$node\"}",
           "format": "time_series",
@@ -1736,7 +1736,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "Read bytes The number of bits read per second per disk partition\nWritten bytes The number of bits written per second per disk partition",
       "fill": 2,
@@ -1787,7 +1787,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_read_bytes_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1800,7 +1800,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_written_bytes_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1851,7 +1851,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "Read time ms The number of seconds per disk partition read operation\n\nWrite time ms The number of seconds per disk partition write operation\n\nIO time ms Number of seconds spent per disk partition input/output operation\n\nIO time weighted Weighted seconds spent per disk partition input/output operation",
       "fill": 3,
@@ -1902,7 +1902,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_io_time_seconds_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1916,7 +1916,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_io_time_weighted_seconds_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1928,7 +1928,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_read_time_seconds_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1941,7 +1941,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_disk_write_time_seconds_total{instance=~\"$node\"}[1m])",
           "format": "time_series",
@@ -1989,7 +1989,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 1,
       "fillGradient": 0,
@@ -2034,7 +2034,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "1-(node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext4|xfs\"} / node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext4|xfs\"})",
           "format": "time_series",
@@ -2081,10 +2081,9 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 1,
-      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
@@ -2092,7 +2091,6 @@
         "y": 27
       },
       "height": "300",
-      "hiddenSeries": false,
       "id": 157,
       "legend": {
         "alignAsTable": true,
@@ -2113,11 +2111,7 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
       "percentage": false,
-      "pluginVersion": "9.4.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2134,7 +2128,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_network_receive_bytes_total{instance=~'$node',device!~'tap.*|veth.*|br.*|docker.*|virbr*|lo*'}[5m])*8",
           "format": "time_series",
@@ -2146,7 +2140,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_network_transmit_bytes_total{instance=~'$node',device!~'tap.*|veth.*|br.*|docker.*|virbr*|lo*'}[5m])*8",
           "format": "time_series",
@@ -2196,11 +2190,10 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "description": "CurrEstab - number of TCP connections with current state of ESTABLISHED or CLOSE-WAIT\n\nActiveOpens - TCP average connections that have been converted from the CLOSED state to the SYN-SENT state (within 1 minute)\n\nPassiveOpens - TCP average connections that have been converted from the LISTEN state to the SYN-RCVD state (within 1 minute)\n\nTCP_alloc - the number of TCP sockets that have been allocated (established, applied to sk_buff)\n\nTCP_inuse - the number of TCP sockets being used (listening)\n\nTCP_tw - number of TCP connections waiting to be closed",
       "fill": 0,
-      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
@@ -2208,7 +2201,6 @@
         "y": 27
       },
       "height": "300",
-      "hiddenSeries": false,
       "id": 158,
       "legend": {
         "alignAsTable": true,
@@ -2225,11 +2217,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
       "percentage": false,
-      "pluginVersion": "9.4.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2241,7 +2229,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_netstat_Tcp_CurrEstab{instance=~'$node'}",
           "format": "time_series",
@@ -2255,7 +2243,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_sockstat_TCP_tw{instance=~'$node'}",
           "format": "time_series",
@@ -2266,7 +2254,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_netstat_Tcp_ActiveOpens{instance=~'$node'}[1m])",
           "format": "time_series",
@@ -2278,7 +2266,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "irate(node_netstat_Tcp_PassiveOpens{instance=~'$node'}[1m])",
           "format": "time_series",
@@ -2289,7 +2277,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_sockstat_TCP_alloc{instance=~'$node'}",
           "format": "time_series",
@@ -2300,7 +2288,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_sockstat_TCP_inuse{instance=~'$node'}",
           "format": "time_series",
@@ -2346,17 +2334,15 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "wEr73vsVk"
+        "uid": "PBFA97CFB590B2093"
       },
       "fill": 0,
-      "fillGradient": 0,
       "gridPos": {
         "h": 10,
         "w": 24,
         "x": 0,
         "y": 35
       },
-      "hiddenSeries": false,
       "id": 169,
       "legend": {
         "alignAsTable": true,
@@ -2375,11 +2361,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null as zero",
-      "options": {
-        "alertThreshold": true
-      },
       "percentage": false,
-      "pluginVersion": "9.4.7",
       "pointradius": 0.5,
       "points": false,
       "renderer": "flot",
@@ -2391,7 +2373,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "wEr73vsVk"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "node_hwmon_temp_celsius{instance=~'$node'}",
           "format": "time_series",
@@ -2525,7 +2507,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "wEr73vsVk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "",
         "hide": 0,
@@ -2537,7 +2519,7 @@
         "options": [],
         "query": {
           "query": "label_values(node_exporter_build_info,env)",
-          "refId": "prometheus-env-Variable-Query"
+          "refId": "Prometheus-env-Variable-Query"
         },
         "refresh": 2,
         "regex": "",
@@ -2558,7 +2540,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "wEr73vsVk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(node_exporter_build_info{env=~'$env'},name)",
         "hide": 0,
@@ -2570,7 +2552,7 @@
         "options": [],
         "query": {
           "query": "label_values(node_exporter_build_info{env=~'$env'},name)",
-          "refId": "prometheus-name-Variable-Query"
+          "refId": "Prometheus-name-Variable-Query"
         },
         "refresh": 2,
         "regex": "",
@@ -2589,7 +2571,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "wEr73vsVk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(node_exporter_build_info{name=~'$name'},instance)",
         "hide": 0,
@@ -2601,7 +2583,7 @@
         "options": [],
         "query": {
           "query": "label_values(node_exporter_build_info{name=~'$name'},instance)",
-          "refId": "prometheus-node-Variable-Query"
+          "refId": "Prometheus-node-Variable-Query"
         },
         "refresh": 2,
         "regex": "",
@@ -2620,7 +2602,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "wEr73vsVk"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "",
         "hide": 2,
@@ -2631,7 +2613,7 @@
         "options": [],
         "query": {
           "query": "query_result(topk(1,sort_desc (max(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext4|xfs\"}) by (mountpoint))))",
-          "refId": "prometheus-maxmount-Variable-Query"
+          "refId": "Prometheus-maxmount-Variable-Query"
         },
         "refresh": 2,
         "regex": "/.*\\\"(.*)\\\".*/",
