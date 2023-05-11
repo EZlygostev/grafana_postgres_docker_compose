@@ -27,9 +27,13 @@ services:
     volumes:
     - ./provisioning/:/etc/grafana/provisioning/datasources/
     - ./dashboards/:/etc/grafana/provisioning/dashboards/
-    - ./dashboards/1 Node Exporter 0.16 + for Prometheus Monitoring display board-1683536451651.json:/var/lib/grafana/dashboards/1 Node Exporter 0.16 + for Prometheus Monitoring display board-1683536451651.json
+    - ./dashboards/node-exporter-full_rev31.json:/var/lib/grafana/dashboards/node-exporter-full_rev31.json
     - grafana-storage:/var/lib/grafana
+    - ./conf/grafana.ini:/etc/grafana/grafana.ini
 
+    environment:
+    - GF_SECURITY_ADMIN_USER=test
+    - GF_SECURITY_ADMIN_PASSWORD=asd123
 
   db:
     image: postgres:latest
@@ -60,7 +64,7 @@ services:
     volumes:
     - jmbp_volume:/opt/jboss/wildfly/bin/.niogit:Z
     ports:
-    - 8080:8080
+    - 8000:8080
     - 8001:8001 
     networks:
     - innet
