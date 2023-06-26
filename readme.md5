@@ -1,8 +1,11 @@
-test.local/grafana/
-test.local/jbpm/
+# Docker compose файл для разворачивания системы мониторинга сервера Grafana и БД Postgres.
 
+Веб-сервер NGINX реагирует на доменное имя:
+test.local/grafana/ - веб-панель GRAFANA
+Первоначальный данные авторизации:
 Логин: test
-Пароль: asd123
+Пароль: test
+Дашбор будет уже настроен.
 
 
 
