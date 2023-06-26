@@ -27,7 +27,7 @@ services:
     - ./conf/grafana.ini:/etc/grafana/grafana.ini
     environment:
     - GF_SECURITY_ADMIN_USER=test
-    - GF_SECURITY_ADMIN_PASSWORD=asd123
+    - GF_SECURITY_ADMIN_PASSWORD=test
 
   db:
     image: postgres:latest
@@ -38,28 +38,10 @@ services:
     ports:
     - 5432:5432
     environment:
-    - POSTGRES_DB=jbpm
-    - POSTGRES_USER=jbpm
-    - POSTGRES_PASSWORD=jbpm
+    - POSTGRES_DB=admin_postgres
+    - POSTGRES_USER=admin_postgres
+    - POSTGRES_PASSWORD=admin_postgres
     depends_on:
-    - web-server
-
-  jbpm:
-    image: jboss/jbpm-server-full:latest
-    container_name: jbpm
-    restart: always
-    environment:
-    - JBPM_DB_DRIVER=postgre
-    - JBPM_DB_NAME=jbpm
-    - JBPM_DB_USER=jbpm
-    - JBPM_DB_PASSWORD=jbpm
-    volumes:
-    - jmbp_volume:/opt/jboss/wildfly/bin/.niogit:Z
-    ports:
-    - 8000:8080
-    - 8001:8001 
-    depends_on:
-    - db
     - web-server
 
   node-exporter:
@@ -100,6 +82,5 @@ services:
 
 volumes:
   db_postgre:
-  jmbp_volume:
   prometheus_data:
   grafana-storage:
