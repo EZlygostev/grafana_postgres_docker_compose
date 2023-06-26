@@ -78,7 +78,12 @@ services:
     ports:
       - 9090:9090
     depends_on:
-    - web-server  
+    - web-server
+    
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
 
 volumes:
   db_postgre:
